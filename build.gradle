@@ -1,0 +1,14 @@
+plugins {
+	id 'com.liquidforte.odin.gradle.component'
+}
+	
+repositories {
+	mavenCentral()
+	jcenter()
+	google()
+}
+	
+apply from: rootProject.file('../Odin/gradle/assertj.gradle')
+apply from: rootProject.file('../Odin/gradle/junit.gradle')
+apply from: rootProject.file('../Odin/gradle/log4j.gradle')
+apply from: rootProject.file('../Odin/gradle/mockito.gradle')

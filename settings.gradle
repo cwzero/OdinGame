@@ -1,0 +1,36 @@
+if (new File(rootDir, '../Plugins').exists()) {
+   	includeBuild '../Plugins'
+
+	pluginManagement {
+    	resolutionStrategy {
+        	eachPlugin {
+        		if (requested.id.id == 'com.liquidforte.odin.gradle.shared') {
+        			useModule('com.liquidforte.odin.gradle:SharedPlugin:0.0.1')
+        		}
+        	
+        		if (requested.id.id == 'com.liquidforte.odin.gradle.component') {
+        			useModule('com.liquidforte.odin.gradle:ComponentPlugin:0.0.1')
+        		}
+        	
+        		if (requested.id.id == 'com.liquidforte.odin.gradle.root') {
+        			useModule('com.liquidforte.odin.gradle:RootPlugin:0.0.1')
+        		}
+        	
+        		if (requested.id.id == 'com.liquidforte.odin.gradle.structure.shared') {
+        			useModule('com.liquidforte.odin.gradle.structure:SharedStructurePlugin:0.0.1')
+        		}
+        	
+        		if (requested.id.id == 'com.liquidforte.odin.gradle.structure.component') {
+        			useModule('com.liquidforte.odin.gradle.structure:ComponentStructurePlugin:0.0.1')
+        		}
+        	
+        		if (requested.id.id == 'com.liquidforte.odin.gradle.structure.root') {
+        			useModule('com.liquidforte.odin.gradle.structure:RootStructurePlugin:0.0.1')
+        		}
+        	}
+    	}
+	}
+}
+
+
+rootProject.name = 'Game'
